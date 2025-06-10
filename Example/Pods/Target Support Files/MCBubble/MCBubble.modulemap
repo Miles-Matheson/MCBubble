@@ -1,0 +1,6 @@
+framework module MCBubble {
+  umbrella header "MCBubble-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -2,12 +2,11 @@ use_frameworks!
 
 platform :ios, '10.0'
 
-target 'BTBubble_Example' do
-  pod 'BTBubble', :path => '../'
-
+target 'MCBubble_Example' do
+  pod 'MCBubble', :path => '../'
   pod 'SnapKit'
-  
-  target 'BTBubble_Tests' do
+
+  target 'MCBubble_Tests' do
     inherit! :search_paths
 
     
