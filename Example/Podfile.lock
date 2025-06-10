@@ -1,5 +1,5 @@
 PODS:
-  - MCBubble (1.1.0)
+  - MCBubble (1.1.1)
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MCBubble: 632e042e99e02dc8e018ed820ff6a1f3d049f6d2
+  MCBubble: db10c462fb6b3ae0a92ad7ec0f5111f174bea415
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
 PODFILE CHECKSUM: d44af21c00ee449babecd0f1c765b3aac6dbdb6d
