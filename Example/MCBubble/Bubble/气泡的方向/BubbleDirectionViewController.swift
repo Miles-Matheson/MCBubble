@@ -1,6 +1,6 @@
 //
 //  BubbleViewController.swift
-//  BTMaterial_Example
+//  
 //
 //  Created by qixin on 2022/11/22.
 //  Copyright © 2022 CocoaPods. All rights reserved.
@@ -142,7 +142,7 @@ extension BubbleDirectionViewController {
             bubble.show(text: text, direction: .right, from: sender)
             
         case 4:
-            bubble = BTBubble()
+            bubble = MCBubble()
             update()
 //            bubble.show(text: text, direction: .auto, from: sender)
             

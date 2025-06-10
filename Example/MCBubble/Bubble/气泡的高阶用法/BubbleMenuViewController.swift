@@ -1,6 +1,6 @@
 //
 //  BubbleMenuViewController.swift
-//  BTBubble_Example
+//  MCBubble_Example
 //
 //  Created by qixin on 2023/12/19.
 //  Copyright © 2023 CocoaPods. All rights reserved.
@@ -28,15 +28,15 @@ class BubbleMenuViewController: BubbleBaseViewController {
     
 
     @objc func menuEvent() {
-        let menuBubble = BTBubble.makeMenuBubble()
+        let menuBubble = MCBubble.makeMenuBubble()
         
-        let item1 = BTBubble.Menu.Item(text: "监控动态", identifier: "", image: UIImage(named: "item1"))
-        let item2 = BTBubble.Menu.Item(text: "监控列表", identifier: "", image: UIImage(named: "item2"))
-        let item3 = BTBubble.Menu.Item(text: "取消监控", identifier: "", image: UIImage(named: "item3"))
-        let item4 = BTBubble.Menu.Item(text: "取消监控", identifier: "", image: UIImage(named: "item4"))
+        let item1 = MCBubble.Menu.Item(text: "监控动态", identifier: "", image: UIImage(named: "item1"))
+        let item2 = MCBubble.Menu.Item(text: "监控列表", identifier: "", image: UIImage(named: "item2"))
+        let item3 = MCBubble.Menu.Item(text: "取消监控", identifier: "", image: UIImage(named: "item3"))
+        let item4 = MCBubble.Menu.Item(text: "取消监控", identifier: "", image: UIImage(named: "item4"))
 
         
-        var config = BTBubble.Menu.Config()
+        var config = MCBubble.Menu.Config()
         config.width = .auto(200)
         let menuView = BTBubbleMenu(items: [item1, item2, item3, item4], config: config)
         menuView.selectItemBlock = { item in

@@ -1,17 +1,17 @@
 //
-//  BTBubble+Menu.swift
-//  BTBubble
+//  MCBubble+Menu.swift
+//  MCBubble
 //
 //  Created by Mccc on 2022/11/21.
 //
 import Foundation
 
-extension BTBubble {
+extension MCBubble {
     
     /// 初始化菜单气泡
     /// - Returns: 气泡的实例
-    public static func makeMenuBubble() -> BTBubble {
-        let bubble = BTBubble()
+    public static func makeMenuBubble() -> MCBubble {
+        let bubble = MCBubble()
         bubble.arrowOffset = .center(0)
         bubble.edgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
         bubble.fillColor = UIColor.hex("212121")
@@ -20,14 +20,14 @@ extension BTBubble {
 }
 
 
-extension BTBubble {
+extension MCBubble {
  
     /// 菜单样式
     public struct Menu { }
 }
 
 
-extension BTBubble.Menu {
+extension MCBubble.Menu {
     
     
     /// 菜单的样式配置
@@ -77,14 +77,14 @@ public class BTBubbleMenu: UIView {
     
     
     /// 点击选中之后的回调
-    public var selectItemBlock: ((BTBubble.Menu.Item) -> Void)?
+    public var selectItemBlock: ((MCBubble.Menu.Item) -> Void)?
     
     
     /// 菜单View的初始化方法
     /// - Parameters:
     ///   - items: 菜单元素
     ///   - config: 菜单配置
-    public init(items: [BTBubble.Menu.Item], config: BTBubble.Menu.Config? = nil) {
+    public init(items: [MCBubble.Menu.Item], config: MCBubble.Menu.Config? = nil) {
         super.init(frame: .zero)
         self.items = items
         self.config = config
@@ -104,7 +104,7 @@ public class BTBubbleMenu: UIView {
     }
     
     private func getFrame() -> CGRect {
-        var tempConfig = BTBubble.Menu.Config()
+        var tempConfig = MCBubble.Menu.Config()
         if let tem = config {
             tempConfig = tem
         }
@@ -153,8 +153,8 @@ public class BTBubbleMenu: UIView {
         return tb
     }()
     
-    var items: [BTBubble.Menu.Item] = []
-    var config: BTBubble.Menu.Config?
+    var items: [MCBubble.Menu.Item] = []
+    var config: MCBubble.Menu.Config?
 }
 
 
@@ -190,7 +190,7 @@ extension BTBubbleMenu: UITableViewDelegate, UITableViewDataSource {
 
 class MenuCell: UITableViewCell {
     
-    var item: BTBubble.Menu.Item? {
+    var item: MCBubble.Menu.Item? {
         didSet {
             contentlabel.text = item?.text
             

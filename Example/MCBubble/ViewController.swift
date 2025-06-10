@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  BTBubble
+//  MCBubble
 //
 //  Created by Mccc on 12/18/2023.
 //  Copyright (c) 2023 Mccc. All rights reserved.
@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         
         title = "气泡"
         view.addSubview(tableView)
+        
     }
     
     // 添加一个跟随光标滚动的模式

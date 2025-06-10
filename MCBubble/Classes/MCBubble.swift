@@ -1,6 +1,6 @@
 //
-//  BTBubble.swift
-//  BTBubble
+//  MCBubble.swift
+//  MCBubble
 //
 //  Created by Mccc on 2022/11/21.
 //
@@ -18,47 +18,47 @@ import UIKit
 
 
 
-public class BTBubble: UIView {
+public class MCBubble: UIView {
     
     
     // 气泡
     /// 气泡的填充颜色（背景颜色）
-    public var fillColor = BTBubbleConfig.shared.appearance.backgroundColor
+    public var fillColor = MCBubbleConfig.shared.appearance.backgroundColor
     /// 气泡圆角的设置
-    public var cornerRadius = BTBubbleConfig.shared.appearance.cornerRadius
+    public var cornerRadius = MCBubbleConfig.shared.appearance.cornerRadius
     /// 气泡边框颜色
-    public var borderColor = BTBubbleConfig.shared.appearance.borderColor
+    public var borderColor = MCBubbleConfig.shared.appearance.borderColor
     /// 气泡边框宽度 (设置过大，会出现UI问题)
-    public var borderWidth = BTBubbleConfig.shared.appearance.borderWidth
+    public var borderWidth = MCBubbleConfig.shared.appearance.borderWidth
     /// 气泡阴影的颜色
-    public var shadowColor: UIColor = BTBubbleConfig.shared.appearance.shadowColor
+    public var shadowColor: UIColor = MCBubbleConfig.shared.appearance.shadowColor
     /// 气泡阴影的偏移量
-    public var shadowOffset: CGSize = BTBubbleConfig.shared.appearance.shadowOffset
+    public var shadowOffset: CGSize = MCBubbleConfig.shared.appearance.shadowOffset
     /// 气泡阴影的圆角
-    public var shadowRadius: Float = BTBubbleConfig.shared.appearance.shadowRadius
+    public var shadowRadius: Float = MCBubbleConfig.shared.appearance.shadowRadius
     /// 气泡阴影的不透明度
-    public var shadowOpacity: Float = BTBubbleConfig.shared.appearance.shadowOpacity
+    public var shadowOpacity: Float = MCBubbleConfig.shared.appearance.shadowOpacity
     /// 气泡的内边距
-    public var edgeInsets = BTBubbleConfig.shared.appearance.edgeInsets
+    public var edgeInsets = MCBubbleConfig.shared.appearance.edgeInsets
 
     
     // 气泡文字
     /// 气泡上的文字大小
-    public var font = BTBubbleConfig.shared.textSetting.font
+    public var font = MCBubbleConfig.shared.textSetting.font
     /// 气泡上的文字颜色
-    public var textColor = BTBubbleConfig.shared.textSetting.textColor
+    public var textColor = MCBubbleConfig.shared.textSetting.textColor
     /// 气泡字体的`NSTextAlignment`
-    public var textAlignment = BTBubbleConfig.shared.textSetting.textAlignment
+    public var textAlignment = MCBubbleConfig.shared.textSetting.textAlignment
     
     
     
     // 气泡箭头
     /// 气泡箭头的大小
-    public var arrowSize = BTBubbleConfig.shared.arrow.arrowSize
+    public var arrowSize = MCBubbleConfig.shared.arrow.arrowSize
     /// 气泡箭头的圆角
-    public var arrowRadius = BTBubbleConfig.shared.arrow.arrowRadius
+    public var arrowRadius = MCBubbleConfig.shared.arrow.arrowRadius
     /// 气泡箭头的偏移量
-    public var arrowOffset: ArrowOffset = BTBubbleConfig.shared.arrow.arrowOffset
+    public var arrowOffset: ArrowOffset = MCBubbleConfig.shared.arrow.arrowOffset
     
 
     
@@ -95,7 +95,7 @@ public class BTBubble: UIView {
     /// 气泡显示的动画延迟时长
     public var delayIn: TimeInterval = 0
     /// 气泡显示动画的类型
-    public var entranceAnimation = BTBubble.EntranceAnimation.fadeIn
+    public var entranceAnimation = MCBubble.EntranceAnimation.fadeIn
     /// 自定义进入动画，需要将entranceAnimation设置为custom，并且动画结束回调回来。
     public var entranceAnimationHandler: ((@escaping () -> Void) -> Void)?
     
@@ -104,12 +104,12 @@ public class BTBubble: UIView {
     /// 气泡隐藏的动画延迟时长
     public var delayOut: TimeInterval = 0
     /// 气泡隐藏的动画类型
-    public var exitAnimation = BTBubble.ExitAnimation.fadeOut
+    public var exitAnimation = MCBubble.ExitAnimation.fadeOut
     /// 自定义结束动画，需要将exitAnimation设置为custom，并且动画结束回调回来。
     public var exitAnimationHandler: ((@escaping () -> Void) -> Void)?
     
     /// 气泡展示中的动画类型
-    public var actionAnimation = BTBubble.ActionAnimation.none
+    public var actionAnimation = MCBubble.ActionAnimation.none
     /// 气泡展示中的动画时长
     public var actionAnimationIn: TimeInterval = 1.2
     /// 气泡展示中的动画时长
@@ -130,19 +130,19 @@ public class BTBubble: UIView {
     /// 决定在气泡外滑动是否隐藏气泡
     public var shouldDismissOnScrollOutside = true
     /// 点击气泡区域
-    public var tapHandler: ((BTBubble) -> Void)?
+    public var tapHandler: ((MCBubble) -> Void)?
     /// 点击了气泡之外的区域
-    public var tapOutsideHandler: ((BTBubble) -> Void)?
+    public var tapOutsideHandler: ((MCBubble) -> Void)?
     /// 点击了目标区域
-    public var tapTargetHandler: ((BTBubble) -> Void)?
+    public var tapTargetHandler: ((MCBubble) -> Void)?
     /// 气泡外滑动
-    public var scrollOutsideHandler: ((BTBubble) -> Void)?
+    public var scrollOutsideHandler: ((MCBubble) -> Void)?
     
     
     /// 气泡出现
-    public var appearHandler: ((BTBubble) -> Void)?
+    public var appearHandler: ((MCBubble) -> Void)?
     /// 气泡消失
-    public var dismissHandler: ((BTBubble) -> Void)?
+    public var dismissHandler: ((MCBubble) -> Void)?
     
     
 
@@ -160,7 +160,7 @@ public class BTBubble: UIView {
     /// 当前的容器
     public private(set) weak var containerView: UIView?
     /// 气泡展示的方向
-    public internal(set) var direction = BTBubble.Direction.auto
+    public internal(set) var direction = MCBubble.Direction.auto
     /// 气泡是否正在动画中
     public private(set) var isAnimating: Bool = false
     /// 遮盖层，其出现只有淡入效果。
@@ -179,8 +179,8 @@ public class BTBubble: UIView {
         }
     }
     
-    internal var maxWidth = BTBubbleConfig.shared.maxWidth
-    internal var maxWidthBackUp: CGFloat = BTBubbleConfig.shared.maxWidth
+    internal var maxWidth = MCBubbleConfig.shared.maxWidth
+    internal var maxWidthBackUp: CGFloat = MCBubbleConfig.shared.maxWidth
     
     
     fileprivate var attributedText: NSMutableAttributedString?
@@ -217,7 +217,7 @@ public class BTBubble: UIView {
     ///   - view: 气泡的父视图
     ///   - frame: 目标frame，气泡箭头指向目标的中心。
     ///   - duration: 自动隐藏时间， 默认4秒, 如何设置为nil则不隐藏。
-    public func show(text: String, direction: BTBubble.Direction = .autoVertical, maxWidth: CGFloat = BTBubbleConfig.shared.maxWidth, from target: UIView, duration: TimeInterval? = 4) {
+    public func show(text: String, direction: MCBubble.Direction = .autoVertical, maxWidth: CGFloat = MCBubbleConfig.shared.maxWidth, from target: UIView, duration: TimeInterval? = 4) {
 
         if text.count == 0 { return }
         resetView()
@@ -252,7 +252,7 @@ public class BTBubble: UIView {
     ///   - view: 气泡的父视图
     ///   - frame: 目标frame，气泡箭头指向目标的中心。
     ///   - duration: 自动隐藏时间， 默认4秒, 如何设置为nil则不隐藏。
-    public func show(attributedText: NSMutableAttributedString, direction: BTBubble.Direction = .autoVertical, maxWidth: CGFloat = BTBubbleConfig.shared.maxWidth, from target: UIView, duration: TimeInterval? = 4) {
+    public func show(attributedText: NSMutableAttributedString, direction: MCBubble.Direction = .autoVertical, maxWidth: CGFloat = MCBubbleConfig.shared.maxWidth, from target: UIView, duration: TimeInterval? = 4) {
         resetView()
         
         if attributedText.string.isEmpty { return }
@@ -293,7 +293,7 @@ public class BTBubble: UIView {
     ///   - view: 气泡的父视图
     ///   - frame: 目标frame，气泡箭头指向目标的中心。
     ///   - duration: 自动隐藏时间， 默认4秒, 如何设置为nil则不隐藏。
-    public func show(customView: UIView, direction: BTBubble.Direction, from target: UIView, duration: TimeInterval? = 4) {
+    public func show(customView: UIView, direction: MCBubble.Direction, from target: UIView, duration: TimeInterval? = 4) {
         resetView()
         
         text = nil
@@ -382,7 +382,7 @@ public class BTBubble: UIView {
 
 
 
-extension BTBubble {
+extension MCBubble {
     func setup() {
         guard let containerView = containerView else { return }
         
@@ -461,28 +461,28 @@ extension BTBubble {
         setNeedsDisplay()
         
         if tapGestureRecognizer == nil {
-            tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(BTBubble.handleTap(_:)))
+            tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MCBubble.handleTap(_:)))
             tapGestureRecognizer?.cancelsTouchesInView = false
             self.addGestureRecognizer(tapGestureRecognizer!)
         }
         if shouldDismissOnTapOutside && tapToRemoveGestureRecognizer == nil {
-            tapToRemoveGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(BTBubble.handleTapOutside(_:)))
+            tapToRemoveGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MCBubble.handleTapOutside(_:)))
             if let _ = tapTargetHandler {
                 tapToRemoveGestureRecognizer?.delegate = self
             }
         }
         if shouldDismissOnScrollOutside && panGestureRecognizer == nil {
-            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(BTBubble.handleScrollOutside(_:)))
+            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(MCBubble.handleScrollOutside(_:)))
         }
         
         if isApplicationInBackground == nil {
-            NotificationCenter.default.addObserver(self, selector: #selector(BTBubble.handleApplicationActive), name: UIApplication.didBecomeActiveNotification, object: nil)
-            NotificationCenter.default.addObserver(self, selector: #selector(BTBubble.handleApplicationResignActive), name: UIApplication.willResignActiveNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(MCBubble.handleApplicationActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(MCBubble.handleApplicationResignActive), name: UIApplication.willResignActiveNotification, object: nil)
         }
     }
 }
 
-extension BTBubble {
+extension MCBubble {
     /// 设置垂直方向的弹出提示，返回气泡的位置 和 气泡箭头的位置
     internal func setupVertically() -> (CGRect, CGPoint) {
         guard let containerView = containerView else { return (CGRect.zero, CGPoint.zero) }
@@ -651,7 +651,7 @@ extension BTBubble {
 
 
 
-extension BTBubble {
+extension MCBubble {
     
     /// 计算文本的bound
     fileprivate func textBounds(for text: String?, attributedText: NSMutableAttributedString?, view: UIView?, with font: UIFont, edges: UIEdgeInsets, in maxWidth: CGFloat) -> CGRect {
@@ -677,7 +677,7 @@ extension BTBubble {
         
         
         // 最大高度不能超过 屏幕高度的35%
-        bounds.size.height = min(bounds.height, BTBubbleConfig.shared.maxHeight)
+        bounds.size.height = min(bounds.height, MCBubbleConfig.shared.maxHeight)
         
         if let view = view {
             bounds = view.frame
@@ -689,10 +689,10 @@ extension BTBubble {
 
 
 
-extension BTBubble {
+extension MCBubble {
     open override func draw(_ rect: CGRect) {
         
-        let path = BTBubble.pathWith(rect: rect, frame: frame, direction: direction, arrowSize: arrowSize, arrowPosition: arrowPosition, arrowRadius: arrowRadius, borderWidth: borderWidth, radius: cornerRadius)
+        let path = MCBubble.pathWith(rect: rect, frame: frame, direction: direction, arrowSize: arrowSize, arrowPosition: arrowPosition, arrowRadius: arrowRadius, borderWidth: borderWidth, radius: cornerRadius)
         
         layer.shadowOpacity = shadowOpacity
         layer.shadowRadius = CGFloat(shadowRadius)
@@ -728,14 +728,14 @@ extension BTBubble {
 
 
 
-extension BTBubble {
+extension MCBubble {
     fileprivate func updateBubble() {
         
         self.setup()
         stopActionAnimation {
             UIView.animate(withDuration: 0.2, delay: 0, options: [.transitionCrossDissolve, .beginFromCurrentState], animations: {
                 
-                let path = BTBubble.pathWith(rect: self.frame, frame: self.frame, direction: self.direction, arrowSize: self.arrowSize, arrowPosition: self.arrowPosition, arrowRadius: self.arrowRadius, borderWidth: self.borderWidth, radius: self.cornerRadius)
+                let path = MCBubble.pathWith(rect: self.frame, frame: self.frame, direction: self.direction, arrowSize: self.arrowSize, arrowPosition: self.arrowPosition, arrowRadius: self.arrowRadius, borderWidth: self.borderWidth, radius: self.cornerRadius)
                 
                 let shadowAnimation = CABasicAnimation(keyPath: "shadowPath")
                 shadowAnimation.duration = 0.2
@@ -768,7 +768,7 @@ extension BTBubble {
 
             self.isAnimating = false
             if let duration = duration {
-                self.dismissTimer = Timer.scheduledTimer(timeInterval: duration, target: self, selector: #selector(BTBubble.hide), userInfo: nil, repeats: false)
+                self.dismissTimer = Timer.scheduledTimer(timeInterval: duration, target: self, selector: #selector(MCBubble.hide), userInfo: nil, repeats: false)
             }
         }
     }
@@ -821,7 +821,7 @@ extension BTBubble {
 
 
 
-extension BTBubble: UIGestureRecognizerDelegate {
+extension MCBubble: UIGestureRecognizerDelegate {
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         
         let location = touch.location(in: containerView)

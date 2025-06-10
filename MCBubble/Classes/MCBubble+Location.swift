@@ -1,6 +1,6 @@
 //
-//  BTBubble+Location.swift
-//  BTBubble
+//  MCBubble+Location.swift
+//  MCBubble
 //
 //  Created by Mccc on 2022/11/21.
 //
@@ -15,7 +15,7 @@ import Foundation
 
 
 
-extension BTBubble {
+extension MCBubble {
     public enum Direction {
         /// 上面
         case up
@@ -49,7 +49,7 @@ extension BTBubble {
     }
 }
 
-extension BTBubble {
+extension MCBubble {
     
     
     /// 设置箭头所在的位置
@@ -112,7 +112,7 @@ extension BTBubble {
 
 
 
-extension BTBubble {
+extension MCBubble {
     
     /// 气泡所在的象限
     enum Quadrant {
@@ -130,7 +130,7 @@ extension BTBubble {
 
 
 
-extension BTBubble {
+extension MCBubble {
     
     /// 计算目标区域，在以手机屏幕中心为坐标系的象限
     /// - 第一/四象限：箭头居气泡右侧

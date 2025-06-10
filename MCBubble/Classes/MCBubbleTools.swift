@@ -1,6 +1,6 @@
 //
 //  BubbleTools.swift
-//  BTBubble
+//  MCBubble
 //
 //  Created by Mccc on 2022/11/21.
 //
@@ -16,7 +16,12 @@ extension UIView {
     /// - Returns: 相对屏幕的rect
     public func convertFrameToScreen() -> CGRect {
         
-        if let keyWindow = UIApplication.shared.keyWindow, let newBounds = superview?.convert(frame, to: keyWindow) {
+        let key = UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap { $0.windows }
+            .first(where: { $0.isKeyWindow })
+        
+        if let keyWindow = key, let newBounds = superview?.convert(frame, to: keyWindow) {
             return newBounds
         }
         

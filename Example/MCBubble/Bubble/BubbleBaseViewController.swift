@@ -1,6 +1,6 @@
 //
 //  BubbleViewController.swift
-//  BTBubble_Example
+//  MCBubble_Example
 //
 //  Created by qixin on 2023/12/19.
 //  Copyright © 2023 CocoaPods. All rights reserved.
@@ -11,7 +11,7 @@ import MCBubble
 
 class BubbleBaseViewController: UIViewController {
     
-    var bubble = BTBubble()
+    var bubble = MCBubble()
     
     var isAutoShowBubble: Bool = true
     

@@ -1,6 +1,6 @@
 //
-//  BTBubble+Check.swift
-//  BTBubble
+//  MCBubble+Check.swift
+//  MCBubble
 //
 //  Created by Mccc on 2022/11/21.
 //
@@ -8,7 +8,7 @@
 import Foundation
 
 
-extension BTBubble {
+extension MCBubble {
     
     /// 获取目标的中心点X值
     func formCenterX() -> CGFloat {
@@ -31,7 +31,7 @@ extension BTBubble {
     }
 }
 
-extension BTBubble {
+extension MCBubble {
     
     /// 箭头偏移量是否满足条件
     func checkArrowOffset(maxOffset: CGFloat) -> Bool {
@@ -63,16 +63,16 @@ extension BTBubble {
 
 
 
-extension BTBubble {
+extension MCBubble {
     
     /** 明确气泡显示方向
      * 如果没有明确方向，就自己决定方向
      * 尽可能的让气泡的显示趋向屏幕中间
      */
-    func checkDirection() -> BTBubble.Direction {
+    func checkDirection() -> MCBubble.Direction {
         if direction.isAuto {
             guard let containerView = containerView else { return direction }
-            var spaces: [BTBubble.Direction: CGFloat] = [:]
+            var spaces: [MCBubble.Direction: CGFloat] = [:]
             
             if direction == .autoHorizontal || direction == .auto {
                 spaces[.left] = from.minX - containerView.frame.minX
@@ -95,7 +95,7 @@ extension BTBubble {
 }
 
 
-extension BTBubble {
+extension MCBubble {
     
     /// 校验最大宽度
     func checkMaxWidth() -> CGFloat {

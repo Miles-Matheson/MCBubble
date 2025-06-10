@@ -10,16 +10,18 @@
 		00A2749F46C967ED4725A32357E3FB1B /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50A49AB14A27B030EF455D9943EB8B /* ConstraintLayoutSupport.swift */; };
 		04637C70546B34F93C3A1D79C3F78B37 /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC84DB0CD86A51B4B66E0450CBF40DE /* ConstraintDirectionalInsetTarget.swift */; };
 		0591132B5EA1BE4DDA268D8A9C3D0421 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A6A462E0F0B040B83C8763773533FE /* LayoutConstraint.swift */; };
-		06280182110B9CEED81A14B36E4768DB /* BTBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D931F5DF97C67DDE69E45A89E85BD4 /* BTBubble.swift */; };
 		06E43B4751069B47B3BD4AFD936A57E3 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B4B15AAC3AB24B43306829FAA77A0 /* ConstraintPriority.swift */; };
 		0833E66E7F19849322305D67777B77DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		0A1C957B4741E8074529ABF1886EFC1E /* MCBubble+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EC9AFF44F83A02603F4203C7F87D8A /* MCBubble+Location.swift */; };
 		0B994CDC79B1AD3A7BE62490D27C60C8 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2DCDFF2011C08759407B4E2038CA11 /* ConstraintAttributes.swift */; };
 		14CA42D998212E00E7488718F44C1A6A /* Pods-MCBubble_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D337698A38B290A8966DB39C475A8029 /* Pods-MCBubble_Example-dummy.m */; };
 		183D8B3E057B885EA7DF9A8CDCCE9029 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8251A08ED8E6CF34420BBF858126F7 /* ConstraintMakerRelatable.swift */; };
-		1E87CB556491A17B8CCFE04938F55E85 /* BTBubble+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896E5C80E126CA2D1AB95DA6342C8BE9 /* BTBubble+Menu.swift */; };
+		1E279584BDFC26C3F228D62BEC940F03 /* MCBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D4F6B0B32999D2C42280DE23B61E2C /* MCBubble.swift */; };
 		220D6AC9B1B1EC8EFFB204F9C1EAC842 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57C38722D9F65992CF2200038C8651E /* ConstraintMakerEditable.swift */; };
 		256558233B40ACA6818F143BBC5B8017 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0072CC268C7456CC1DA6E8180975AB43 /* ConstraintViewDSL.swift */; };
-		339AEBC03BDF4FC6EF6584431F2EF636 /* MCBubble-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35F544039BF53E9745D52A233CDFD8DC /* MCBubble-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25D5A15A7BAD5F87B895DA734E6078E7 /* MCBubbleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7C9283E5B3AFA22D9FD090C3D76C0C /* MCBubbleConfig.swift */; };
+		27275D3BE8AD7D7A143E1A290FB9040B /* MCBubble+Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BDBE5DAD65D31112CC3E623E3808B0 /* MCBubble+Check.swift */; };
+		339AEBC03BDF4FC6EF6584431F2EF636 /* MCBubble-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 644BDE09DB1DED9458E1355FBCFC1929 /* MCBubble-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3660B4F629053ABC3C1DF69366770289 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD101E65ADCCC341BCD3BFF777CA947C /* ConstraintConfig.swift */; };
 		37AED11DB2568021D9A4ED3CA55B023E /* Pods-MCBubble_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D92B65E1E5F08A1395095598C46B37DB /* Pods-MCBubble_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38B9D58E94D9C1CECD7E381C64A2329D /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EE8343B4F64CFDE73F65CEF14A13F /* UILayoutSupport+Extensions.swift */; };
@@ -34,36 +36,34 @@
 		5D36B99F3CAB1FC7337082D9581FECA6 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBE69DD3B611E4180FCBDD8CDE8814 /* Debugging.swift */; };
 		604D3C93C17978C23600EC415949AB64 /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D52A60BF41010F680313572B051598 /* ConstraintInsets.swift */; };
 		611CEF7FF1EF9EA1BCEF6C73EEE3ACCF /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55D2A11C17BBCE3C9F7F0BA9555B5AE /* ConstraintLayoutGuide.swift */; };
-		669F02E0C08E13B74FE1C3CEBBE1DB99 /* BubbleTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6521300CBF0B7D6F63A67128121B8 /* BubbleTools.swift */; };
-		6790AC8A68FD6667EFC2C3CCE5BD8DF7 /* BTBubble+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = C022A5CEF3331C2141FB5AA6F2F59B2A /* BTBubble+Draw.swift */; };
 		69DE75BA185BBAB5FDAA28321F3C849F /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E5BB7E9F99F41E937A7E2CCEF178BE /* ConstraintItem.swift */; };
 		6AC1B881BB319C89AD023A02CDC8FC3D /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B678C00268C9CF7E410145D6F78AA /* ConstraintLayoutGuide+Extensions.swift */; };
 		6EAC8B6FA2D115DE708A58C601DD25E1 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDF096C3836F945945C9FFDB5090F5 /* Constraint.swift */; };
-		78A29A33695A3BF8EB80CA38F93B363D /* BTBubble+Check.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D60230609B444A160AA9D1C0B81C29 /* BTBubble+Check.swift */; };
+		790024943D35D12ABC0E7723B33DA278 /* MCBubble+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20843A371A2B27A704283FCADC03A452 /* MCBubble+Draw.swift */; };
 		8835C6E2BCA31FA7D3F7FF7722F655D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		95E194A3AABB5407231E898B6686F73E /* ConstraintMakerRelatable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583BBF75085D255E27A5F9EF9EC203A5 /* ConstraintMakerRelatable+Extensions.swift */; };
-		977042932341BC26239A9AD8C39C03B0 /* MCBubble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D102C5BF4CF9CF3C037A5AA45FA7BB /* MCBubble-dummy.m */; };
 		98F570DA48370453D648BD526FDAAEAA /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE15C12D4B2736CB1D1B07F4838FCA7 /* LayoutConstraintItem.swift */; };
 		9C9548E8B4675954566202F7B87FF0E6 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C282AEDFB53BD2F6B277738727FF116D /* ConstraintConstantTarget.swift */; };
 		9E02CFFEFE1BEC978B512286F03D31DA /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5693124BFA9269D2085EC1ADFAAD76 /* ConstraintInsetTarget.swift */; };
 		A03FDA8BC5741880B1EF11AFD248EF48 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751D5202E1F291CC13F7AE0CD669B831 /* ConstraintOffsetTarget.swift */; };
 		A3E3AB7C765C21AE17B1E6EE6560040C /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 932076048BB79360F50A76C2C738DFC8 /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5A8BF973BFE9C9304372A26C9F2E35B /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFBBDB0D11D15EA3C0D640EF407F700 /* ConstraintMakerExtendable.swift */; };
+		A7B52E0B12467BEF71FB1EAD939C4BF7 /* MCBubbleTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEE4417ECEAC56DA5ED3FD375004660 /* MCBubbleTools.swift */; };
+		A8E0AA37EA48960058E1E1E206439901 /* MCBubble+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838F8AB7C0DD9274CEC1DE79ED66B679 /* MCBubble+Animation.swift */; };
 		B03B5579590D528CBA6D11FF638BC2AF /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E2E91424D9428F311B73888D8E927 /* Typealiases.swift */; };
 		B43017FEC99D227D4CDD81DD2C27D9D9 /* ConstraintMakerPrioritizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0A527ED8F0A719FF610D743A87DAD3 /* ConstraintMakerPrioritizable.swift */; };
-		B73557B2023BDD729AA7DB982610204A /* BTBubble+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E828656E9DF16CA87650B1BAFC849C /* BTBubble+Location.swift */; };
 		B752F7C4BECB65894B1F49421049CE5F /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458867733779570F7398C76B46AEAF5E /* ConstraintView.swift */; };
 		BD47CB74CD9B2B4D2D942C9B65748DFB /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 143498449916D71708A8AF2F96E7320A /* SnapKit-dummy.m */; };
+		C2E1A906F97DF9C354306FB034738C33 /* MCBubble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEB2C4F8F911414F65E446AC823A356 /* MCBubble-dummy.m */; };
 		C66FF76F26AF6ACF4BDFABDC852B1A06 /* Pods-MCBubble_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DAFEEB148B13A8B6C3CF2CA1684B2C9 /* Pods-MCBubble_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0C99638A51DE7A748758961A631185D /* MCBubble+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A9EB844144A2092F3DE28D4F495E38 /* MCBubble+Menu.swift */; };
 		DD1F5F5DA62CF2DC46EF7A5E00D21912 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		E01CF64B8D44F02818C556AB23D3CF5B /* BTBubble+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B23C5C5BC9FFBD0B9D148086DCDEC /* BTBubble+Animation.swift */; };
 		E0663F2BED9F86236AA26CB3C40EFCD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		E98DC8FB2578E76A812E0C94BA10E1B1 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8DFD8FEE78807F86F0544749C80450 /* ConstraintDirectionalInsets.swift */; };
 		EF21586EC3DFF6097A58EEC87376A0C1 /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91F91B010D4991E838DAC578595BA7A /* ConstraintLayoutGuideDSL.swift */; };
 		F7C0960CEEB8F0C18F4503B405EAC08F /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00529F62152FE0E9A82AF6D8EAAAE2E1 /* ConstraintMultiplierTarget.swift */; };
 		F953AA9104BFE0C2DAD639EA60104A75 /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83141A7BA266489296BCBEF99AC5412 /* ConstraintView+Extensions.swift */; };
 		FAB03959C2357E325B19E08BC4775DAB /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B3092297166519217A25AD70D5341 /* ConstraintMaker.swift */; };
-		FDA3B84CD76A189CA2053C245DF98BDE /* BTBubbleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5029A610BFBB7E1B2DACCF9552384 /* BTBubbleConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,27 +95,29 @@
 		0072CC268C7456CC1DA6E8180975AB43 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Sources/ConstraintViewDSL.swift; sourceTree = "<group>"; };
 		02732995CB94C03CB83E1935B434AD74 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Sources/ConstraintDSL.swift; sourceTree = "<group>"; };
 		0A4B3092297166519217A25AD70D5341 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Sources/ConstraintMaker.swift; sourceTree = "<group>"; };
+		0AE4F599CA405E1747B7120FA8F96F3B /* MCBubble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MCBubble.release.xcconfig; sourceTree = "<group>"; };
 		0AFDF096C3836F945945C9FFDB5090F5 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Sources/Constraint.swift; sourceTree = "<group>"; };
 		0EE5F8CB92905AE76169A71226B44035 /* SnapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.debug.xcconfig; sourceTree = "<group>"; };
 		143498449916D71708A8AF2F96E7320A /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
 		145E52550B9C4D69090A471B0B01ADED /* Pods-MCBubble_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MCBubble_Tests.modulemap"; sourceTree = "<group>"; };
 		152EE8343B4F64CFDE73F65CEF14A13F /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Sources/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
 		206D4158EA7688FEB6CD6EEEB246E9E9 /* Pods-MCBubble_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MCBubble_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		261EA5BD39C170E9B4315CCC17ECFF4E /* MCBubble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MCBubble.debug.xcconfig; sourceTree = "<group>"; };
+		20843A371A2B27A704283FCADC03A452 /* MCBubble+Draw.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MCBubble+Draw.swift"; path = "MCBubble/Classes/MCBubble+Draw.swift"; sourceTree = "<group>"; };
 		26E5BB7E9F99F41E937A7E2CCEF178BE /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Sources/ConstraintItem.swift; sourceTree = "<group>"; };
+		27622A4D0EB7964D3C7F28AC11826C75 /* MCBubble.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MCBubble.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2C7C9283E5B3AFA22D9FD090C3D76C0C /* MCBubbleConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MCBubbleConfig.swift; path = MCBubble/Classes/MCBubbleConfig.swift; sourceTree = "<group>"; };
+		2D1430B6F9CBD5F001BE158E7E083CA8 /* MCBubble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MCBubble.debug.xcconfig; sourceTree = "<group>"; };
 		2FADA93535542558D35896BA49AE1955 /* Pods-MCBubble_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MCBubble_Example"; path = Pods_MCBubble_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FC3D124D89DF2AA515C3D430ECDC4C5 /* MCBubble-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MCBubble-Info.plist"; sourceTree = "<group>"; };
 		2FFF57EAB2D2F120AE4EA163136BE0B3 /* MCBubble */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MCBubble; path = MCBubble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		355B23C5C5BC9FFBD0B9D148086DCDEC /* BTBubble+Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BTBubble+Animation.swift"; path = "MCBubble/Classes/BTBubble+Animation.swift"; sourceTree = "<group>"; };
-		35F544039BF53E9745D52A233CDFD8DC /* MCBubble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MCBubble-umbrella.h"; sourceTree = "<group>"; };
 		38A6A462E0F0B040B83C8763773533FE /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Sources/LayoutConstraint.swift; sourceTree = "<group>"; };
-		398411BEFCBE8B68CC88C63D2FE90645 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		39E828656E9DF16CA87650B1BAFC849C /* BTBubble+Location.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BTBubble+Location.swift"; path = "MCBubble/Classes/BTBubble+Location.swift"; sourceTree = "<group>"; };
+		38EC9AFF44F83A02603F4203C7F87D8A /* MCBubble+Location.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MCBubble+Location.swift"; path = "MCBubble/Classes/MCBubble+Location.swift"; sourceTree = "<group>"; };
 		3AF34962F54DAA8DEB0A1D7D4F3FC09A /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Sources/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
 		3B966EC3FD3EE9134FFC864380F3501A /* Pods-MCBubble_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MCBubble_Example.release.xcconfig"; sourceTree = "<group>"; };
-		3F5B23FDBE6DD55D49E38B98A5550A2C /* MCBubble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MCBubble.modulemap; sourceTree = "<group>"; };
 		40FDBB1C994B106971C65EC87C512D80 /* Pods-MCBubble_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MCBubble_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		412D51A2BEEF78C262C4B3F3798D1702 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Sources/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
 		458867733779570F7398C76B46AEAF5E /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Sources/ConstraintView.swift; sourceTree = "<group>"; };
+		45E91D42A7B77DBD58DFEF8108993F7A /* MCBubble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MCBubble-prefix.pch"; sourceTree = "<group>"; };
 		49C67233FE9E39D069D0AB85E1A666BB /* Pods-MCBubble_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MCBubble_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4C6D8E960E7595FC6E02FBD637E310D3 /* Pods-MCBubble_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MCBubble_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		4C8251A08ED8E6CF34420BBF858126F7 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Sources/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
@@ -123,22 +125,27 @@
 		4DAFEEB148B13A8B6C3CF2CA1684B2C9 /* Pods-MCBubble_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MCBubble_Tests-umbrella.h"; sourceTree = "<group>"; };
 		5032FD34D5BB9A1F925C649B43CC02DC /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Sources/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		50E4513A3D7040F5EC4D7A92D363777D /* Pods-MCBubble_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MCBubble_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		51D4F6B0B32999D2C42280DE23B61E2C /* MCBubble.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MCBubble.swift; path = MCBubble/Classes/MCBubble.swift; sourceTree = "<group>"; };
+		53B31AF3C971E226C2920D2BDFA08FF5 /* MCBubble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MCBubble.modulemap; sourceTree = "<group>"; };
 		53F15E5EFDBD0E753D39E694ABE02EB6 /* Pods-MCBubble_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MCBubble_Example-frameworks.sh"; sourceTree = "<group>"; };
 		54A0BC61944B3E89515CACB83BB1B976 /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Sources/ConstraintDescription.swift; sourceTree = "<group>"; };
-		56D102C5BF4CF9CF3C037A5AA45FA7BB /* MCBubble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MCBubble-dummy.m"; sourceTree = "<group>"; };
-		57743D9D51683D2C30CAA7E019926637 /* MCBubble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MCBubble-prefix.pch"; sourceTree = "<group>"; };
 		583BBF75085D255E27A5F9EF9EC203A5 /* ConstraintMakerRelatable+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintMakerRelatable+Extensions.swift"; path = "Sources/ConstraintMakerRelatable+Extensions.swift"; sourceTree = "<group>"; };
 		585F8A93EFD640A372D51DA21D1CDFB1 /* Pods-MCBubble_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MCBubble_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5B85594192FB740B75DE36C995B9B9DF /* Pods-MCBubble_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MCBubble_Example-Info.plist"; sourceTree = "<group>"; };
+		5DEE4417ECEAC56DA5ED3FD375004660 /* MCBubbleTools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MCBubbleTools.swift; path = MCBubble/Classes/MCBubbleTools.swift; sourceTree = "<group>"; };
 		5F2DCDFF2011C08759407B4E2038CA11 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Sources/ConstraintAttributes.swift; sourceTree = "<group>"; };
+		644BDE09DB1DED9458E1355FBCFC1929 /* MCBubble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MCBubble-umbrella.h"; sourceTree = "<group>"; };
 		7096225ED146E16EC168C99FEDD215B5 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Sources/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		73A9EB844144A2092F3DE28D4F495E38 /* MCBubble+Menu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MCBubble+Menu.swift"; path = "MCBubble/Classes/MCBubble+Menu.swift"; sourceTree = "<group>"; };
 		751D5202E1F291CC13F7AE0CD669B831 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Sources/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
+		76E50A94CD0BD32D02D780337F96F5FD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		782C19B041349DED0C47AC71C798375C /* SnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.release.xcconfig; sourceTree = "<group>"; };
 		7BC84DB0CD86A51B4B66E0450CBF40DE /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Sources/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
 		81C5E68D5EF8A4436EA241B331C2B118 /* Pods-MCBubble_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MCBubble_Tests-dummy.m"; sourceTree = "<group>"; };
-		896E5C80E126CA2D1AB95DA6342C8BE9 /* BTBubble+Menu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BTBubble+Menu.swift"; path = "MCBubble/Classes/BTBubble+Menu.swift"; sourceTree = "<group>"; };
+		838F8AB7C0DD9274CEC1DE79ED66B679 /* MCBubble+Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MCBubble+Animation.swift"; path = "MCBubble/Classes/MCBubble+Animation.swift"; sourceTree = "<group>"; };
 		8999472AE5DB82E5E3DABD0278849CEA /* Pods-MCBubble_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MCBubble_Tests-Info.plist"; sourceTree = "<group>"; };
+		89BDBE5DAD65D31112CC3E623E3808B0 /* MCBubble+Check.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MCBubble+Check.swift"; path = "MCBubble/Classes/MCBubble+Check.swift"; sourceTree = "<group>"; };
 		932076048BB79360F50A76C2C738DFC8 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
 		94E42FA589867A878EC039323DA40B7F /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
 		960E2E91424D9428F311B73888D8E927 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Sources/Typealiases.swift; sourceTree = "<group>"; };
@@ -146,26 +153,19 @@
 		9C8743B1507BAEB2CACFF084AA50FCB4 /* Pods-MCBubble_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MCBubble_Tests"; path = Pods_MCBubble_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F0A527ED8F0A719FF610D743A87DAD3 /* ConstraintMakerPrioritizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPrioritizable.swift; path = Sources/ConstraintMakerPrioritizable.swift; sourceTree = "<group>"; };
-		B0D60230609B444A160AA9D1C0B81C29 /* BTBubble+Check.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BTBubble+Check.swift"; path = "MCBubble/Classes/BTBubble+Check.swift"; sourceTree = "<group>"; };
-		B1D5029A610BFBB7E1B2DACCF9552384 /* BTBubbleConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BTBubbleConfig.swift; path = MCBubble/Classes/BTBubbleConfig.swift; sourceTree = "<group>"; };
+		B37339A1BC4E659891DC0639C5F15E0E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		B57B4B15AAC3AB24B43306829FAA77A0 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Sources/ConstraintPriority.swift; sourceTree = "<group>"; };
 		BA50A49AB14A27B030EF455D9943EB8B /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Sources/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
 		BC8DFD8FEE78807F86F0544749C80450 /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsets.swift; path = Sources/ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
 		BDF6E18B5372A4BBE8507FE4B9F165C0 /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
-		C022A5CEF3331C2141FB5AA6F2F59B2A /* BTBubble+Draw.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BTBubble+Draw.swift"; path = "MCBubble/Classes/BTBubble+Draw.swift"; sourceTree = "<group>"; };
-		C124C5605812FF18861BE0C8112F4AA7 /* MCBubble-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MCBubble-Info.plist"; sourceTree = "<group>"; };
 		C282AEDFB53BD2F6B277738727FF116D /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Sources/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
 		C5D52A60BF41010F680313572B051598 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Sources/ConstraintInsets.swift; sourceTree = "<group>"; };
 		C83141A7BA266489296BCBEF99AC5412 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Sources/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
-		C8F909F9B62B4EEF474E4D8D8988766E /* MCBubble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MCBubble.release.xcconfig; sourceTree = "<group>"; };
 		C91F91B010D4991E838DAC578595BA7A /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Sources/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
-		CF9D770B0F30997E8E4404C09115C929 /* MCBubble.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MCBubble.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CAEB2C4F8F911414F65E446AC823A356 /* MCBubble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MCBubble-dummy.m"; sourceTree = "<group>"; };
 		D2FD9EFCFC3AA452137876B761FFB621 /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
 		D337698A38B290A8966DB39C475A8029 /* Pods-MCBubble_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MCBubble_Example-dummy.m"; sourceTree = "<group>"; };
-		D35E3A0BFC9F927A2BA9404A737EFE40 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		D8D931F5DF97C67DDE69E45A89E85BD4 /* BTBubble.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BTBubble.swift; path = MCBubble/Classes/BTBubble.swift; sourceTree = "<group>"; };
 		D92B65E1E5F08A1395095598C46B37DB /* Pods-MCBubble_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MCBubble_Example-umbrella.h"; sourceTree = "<group>"; };
-		D9F6521300CBF0B7D6F63A67128121B8 /* BubbleTools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleTools.swift; path = MCBubble/Classes/BubbleTools.swift; sourceTree = "<group>"; };
 		DA273E7C4B95C659EBA0BC73797EF953 /* Pods-MCBubble_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MCBubble_Example.modulemap"; sourceTree = "<group>"; };
 		DD101E65ADCCC341BCD3BFF777CA947C /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Sources/ConstraintConfig.swift; sourceTree = "<group>"; };
 		DDFBBDB0D11D15EA3C0D640EF407F700 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Sources/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
@@ -214,29 +214,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00884DD7E78EF416679D613F344EEE5B /* Pod */ = {
+		3DDDDC0B685FE8BBC9953A59B8B913B9 /* MCBubble */ = {
 			isa = PBXGroup;
 			children = (
-				D35E3A0BFC9F927A2BA9404A737EFE40 /* LICENSE */,
-				CF9D770B0F30997E8E4404C09115C929 /* MCBubble.podspec */,
-				398411BEFCBE8B68CC88C63D2FE90645 /* README.md */,
+				51D4F6B0B32999D2C42280DE23B61E2C /* MCBubble.swift */,
+				838F8AB7C0DD9274CEC1DE79ED66B679 /* MCBubble+Animation.swift */,
+				89BDBE5DAD65D31112CC3E623E3808B0 /* MCBubble+Check.swift */,
+				20843A371A2B27A704283FCADC03A452 /* MCBubble+Draw.swift */,
+				38EC9AFF44F83A02603F4203C7F87D8A /* MCBubble+Location.swift */,
+				73A9EB844144A2092F3DE28D4F495E38 /* MCBubble+Menu.swift */,
+				2C7C9283E5B3AFA22D9FD090C3D76C0C /* MCBubbleConfig.swift */,
+				5DEE4417ECEAC56DA5ED3FD375004660 /* MCBubbleTools.swift */,
+				D59045E39E7CB89AE8961F3BBA16C522 /* Pod */,
+				5E88334B3DE8F521E55734EE43A85C90 /* Support Files */,
 			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		11A1219A402144A4EB41018A93540993 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3F5B23FDBE6DD55D49E38B98A5550A2C /* MCBubble.modulemap */,
-				56D102C5BF4CF9CF3C037A5AA45FA7BB /* MCBubble-dummy.m */,
-				C124C5605812FF18861BE0C8112F4AA7 /* MCBubble-Info.plist */,
-				57743D9D51683D2C30CAA7E019926637 /* MCBubble-prefix.pch */,
-				35F544039BF53E9745D52A233CDFD8DC /* MCBubble-umbrella.h */,
-				261EA5BD39C170E9B4315CCC17ECFF4E /* MCBubble.debug.xcconfig */,
-				C8F909F9B62B4EEF474E4D8D8988766E /* MCBubble.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/MCBubble";
+			name = MCBubble;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		403EB05A3920652EED411213C52E3AC2 /* Support Files */ = {
@@ -266,7 +259,7 @@
 		51E091A652EB197A71A9A38BC0DD6852 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8DD6BD86759FD62B2C52C98B38160C01 /* MCBubble */,
+				3DDDDC0B685FE8BBC9953A59B8B913B9 /* MCBubble */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -279,22 +272,19 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		8DD6BD86759FD62B2C52C98B38160C01 /* MCBubble */ = {
+		5E88334B3DE8F521E55734EE43A85C90 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D8D931F5DF97C67DDE69E45A89E85BD4 /* BTBubble.swift */,
-				355B23C5C5BC9FFBD0B9D148086DCDEC /* BTBubble+Animation.swift */,
-				B0D60230609B444A160AA9D1C0B81C29 /* BTBubble+Check.swift */,
-				C022A5CEF3331C2141FB5AA6F2F59B2A /* BTBubble+Draw.swift */,
-				39E828656E9DF16CA87650B1BAFC849C /* BTBubble+Location.swift */,
-				896E5C80E126CA2D1AB95DA6342C8BE9 /* BTBubble+Menu.swift */,
-				B1D5029A610BFBB7E1B2DACCF9552384 /* BTBubbleConfig.swift */,
-				D9F6521300CBF0B7D6F63A67128121B8 /* BubbleTools.swift */,
-				00884DD7E78EF416679D613F344EEE5B /* Pod */,
-				11A1219A402144A4EB41018A93540993 /* Support Files */,
+				53B31AF3C971E226C2920D2BDFA08FF5 /* MCBubble.modulemap */,
+				CAEB2C4F8F911414F65E446AC823A356 /* MCBubble-dummy.m */,
+				2FC3D124D89DF2AA515C3D430ECDC4C5 /* MCBubble-Info.plist */,
+				45E91D42A7B77DBD58DFEF8108993F7A /* MCBubble-prefix.pch */,
+				644BDE09DB1DED9458E1355FBCFC1929 /* MCBubble-umbrella.h */,
+				2D1430B6F9CBD5F001BE158E7E083CA8 /* MCBubble.debug.xcconfig */,
+				0AE4F599CA405E1747B7120FA8F96F3B /* MCBubble.release.xcconfig */,
 			);
-			name = MCBubble;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MCBubble";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -377,6 +367,16 @@
 			);
 			name = "Pods-MCBubble_Tests";
 			path = "Target Support Files/Pods-MCBubble_Tests";
+			sourceTree = "<group>";
+		};
+		D59045E39E7CB89AE8961F3BBA16C522 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				76E50A94CD0BD32D02D780337F96F5FD /* LICENSE */,
+				27622A4D0EB7964D3C7F28AC11826C75 /* MCBubble.podspec */,
+				B37339A1BC4E659891DC0639C5F15E0E /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		D98FF85B813F38747E849A2EEE3D191E /* Pods-MCBubble_Example */ = {
@@ -496,7 +496,7 @@
 			buildConfigurationList = 073ACD2400F8343CF931C5C7FB5B2D3F /* Build configuration list for PBXNativeTarget "MCBubble" */;
 			buildPhases = (
 				C36F4FCF9B1018F37983B13D862AB8A7 /* Headers */,
-				43533B5EDA6712A71A668F3390EE9BE9 /* Sources */,
+				2D32F6D3938C3F3B4EA01775CE01B916 /* Sources */,
 				F4D9E1BAF69AAE3BCBBB67395D6ABFEB /* Frameworks */,
 				6CDA027CA848257EA240E617A423DAEE /* Resources */,
 			);
@@ -598,19 +598,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		43533B5EDA6712A71A668F3390EE9BE9 /* Sources */ = {
+		2D32F6D3938C3F3B4EA01775CE01B916 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06280182110B9CEED81A14B36E4768DB /* BTBubble.swift in Sources */,
-				E01CF64B8D44F02818C556AB23D3CF5B /* BTBubble+Animation.swift in Sources */,
-				78A29A33695A3BF8EB80CA38F93B363D /* BTBubble+Check.swift in Sources */,
-				6790AC8A68FD6667EFC2C3CCE5BD8DF7 /* BTBubble+Draw.swift in Sources */,
-				B73557B2023BDD729AA7DB982610204A /* BTBubble+Location.swift in Sources */,
-				1E87CB556491A17B8CCFE04938F55E85 /* BTBubble+Menu.swift in Sources */,
-				FDA3B84CD76A189CA2053C245DF98BDE /* BTBubbleConfig.swift in Sources */,
-				669F02E0C08E13B74FE1C3CEBBE1DB99 /* BubbleTools.swift in Sources */,
-				977042932341BC26239A9AD8C39C03B0 /* MCBubble-dummy.m in Sources */,
+				1E279584BDFC26C3F228D62BEC940F03 /* MCBubble.swift in Sources */,
+				A8E0AA37EA48960058E1E1E206439901 /* MCBubble+Animation.swift in Sources */,
+				27275D3BE8AD7D7A143E1A290FB9040B /* MCBubble+Check.swift in Sources */,
+				790024943D35D12ABC0E7723B33DA278 /* MCBubble+Draw.swift in Sources */,
+				0A1C957B4741E8074529ABF1886EFC1E /* MCBubble+Location.swift in Sources */,
+				D0C99638A51DE7A748758961A631185D /* MCBubble+Menu.swift in Sources */,
+				C2E1A906F97DF9C354306FB034738C33 /* MCBubble-dummy.m in Sources */,
+				25D5A15A7BAD5F87B895DA734E6078E7 /* MCBubbleConfig.swift in Sources */,
+				A7B52E0B12467BEF71FB1EAD939C4BF7 /* MCBubbleTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,7 +888,7 @@
 		};
 		9A5D05D711FFF7ECD9781CD2FCD24465 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8F909F9B62B4EEF474E4D8D8988766E /* MCBubble.release.xcconfig */;
+			baseConfigurationReference = 0AE4F599CA405E1747B7120FA8F96F3B /* MCBubble.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1050,7 +1050,7 @@
 		};
 		D5A4BF77F1889C375B8825E556C14B07 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 261EA5BD39C170E9B4315CCC17ECFF4E /* MCBubble.debug.xcconfig */;
+			baseConfigurationReference = 2D1430B6F9CBD5F001BE158E7E083CA8 /* MCBubble.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

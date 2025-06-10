@@ -1,6 +1,6 @@
 //
-//  BTBubbleConstant.swift
-//  BTBubble
+//  MCBubbleConstant.swift
+//  MCBubble
 //
 //  Created by Mccc on 2022/11/21.
 //
@@ -9,17 +9,17 @@ import Foundation
 
 
 
-public struct BTBubbleConfig {
-    public static var shared = BTBubbleConfig()
+public struct MCBubbleConfig {
+    public static var shared = MCBubbleConfig()
     
     /// 气泡外观相关的配置
-    public var appearance = BTBubbleConfig.Appearance()
+    public var appearance = MCBubbleConfig.Appearance()
     
     /// 文字的相关设置
-    public var textSetting = BTBubbleConfig.TextSetting()
+    public var textSetting = MCBubbleConfig.TextSetting()
     
     /// 气泡的箭头
-    public var arrow = BTBubbleConfig.Arrow()
+    public var arrow = MCBubbleConfig.Arrow()
     
     /// 气泡的最大宽度
     public var maxWidth: CGFloat = 282
@@ -38,7 +38,7 @@ public struct BTBubbleConfig {
 
 
 
-extension BTBubbleConfig {
+extension MCBubbleConfig {
     
     public struct Appearance {
         // 气泡
@@ -64,7 +64,7 @@ extension BTBubbleConfig {
 }
 
 
-extension BTBubbleConfig {
+extension MCBubbleConfig {
     
     public struct TextSetting {
         // 气泡文字
@@ -77,7 +77,7 @@ extension BTBubbleConfig {
     }
 }
 
-extension BTBubbleConfig {
+extension MCBubbleConfig {
     /// 气泡箭头
     public struct Arrow {
         /// 气泡箭头的大小
@@ -85,7 +85,7 @@ extension BTBubbleConfig {
         /// 气泡箭头的圆角
         public var arrowRadius = CGFloat(0.0)
         /// 气泡箭头的偏移量
-        public var arrowOffset: BTBubble.ArrowOffset = .auto(20)
+        public var arrowOffset: MCBubble.ArrowOffset = .auto(20)
         
     }
 }

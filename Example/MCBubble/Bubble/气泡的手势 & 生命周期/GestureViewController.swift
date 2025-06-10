@@ -1,6 +1,6 @@
 //
 //  GestureViewController.swift
-//  BTBubble_Example
+//  MCBubble_Example
 //
 //  Created by qixin on 2023/12/18.
 //  Copyright © 2023 CocoaPods. All rights reserved.

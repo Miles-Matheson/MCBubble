@@ -1,6 +1,6 @@
 //
-//  BTBubble+Animation.swift
-//  BTBubble
+//  MCBubble+Animation.swift
+//  MCBubble
 //
 //  Created by Mccc on 2022/11/21.
 //
@@ -12,7 +12,7 @@ import Foundation
 
 
 
-extension BTBubble {
+extension MCBubble {
     
     /// 指定展示动画类型的枚举
     public enum EntranceAnimation {
@@ -28,7 +28,7 @@ extension BTBubble {
 }
 
 
-extension BTBubble {
+extension MCBubble {
     /// 指定退出动画类型的枚举
     public enum ExitAnimation {
         /// 缩放动画 from 0% to 100%
@@ -43,7 +43,7 @@ extension BTBubble {
 }
 
 
-extension BTBubble {
+extension MCBubble {
     /// 指定动作动画类型，动作动画在弹出提示可见和入口动画完成后执行
     public enum ActionAnimation {
         /// 弹出提示沿着它的方向弹跳。可以选择提供反弹偏移量
@@ -62,7 +62,7 @@ extension BTBubble {
 
 
 
-public extension BTBubble {
+public extension MCBubble {
     
     /// 进入动画
     func performEntranceAnimation(completion: @escaping () -> Void) {
@@ -195,16 +195,16 @@ public extension BTBubble {
 
 
 
-extension BTBubble {
+extension MCBubble {
     func performActionAnimation() {
         switch actionAnimation {
         case .bounce(let offset):
             shouldBounce = true
-            bounceAnimation(offset: offset ?? BTBubbleConfig.shared.defaultBounceOffset)
+            bounceAnimation(offset: offset ?? MCBubbleConfig.shared.defaultBounceOffset)
         case .float(let offsetX, let offsetY):
-            floatAnimation(offsetX: offsetX ?? BTBubbleConfig.shared.defaultFloatOffset, offsetY: offsetY ?? BTBubbleConfig.shared.defaultFloatOffset)
+            floatAnimation(offsetX: offsetX ?? MCBubbleConfig.shared.defaultFloatOffset, offsetY: offsetY ?? MCBubbleConfig.shared.defaultFloatOffset)
         case .pulse(let offset):
-            pulseAnimation(offset: offset ?? BTBubbleConfig.shared.defaultPulseOffset)
+            pulseAnimation(offset: offset ?? MCBubbleConfig.shared.defaultPulseOffset)
         case .none:
             return
         }

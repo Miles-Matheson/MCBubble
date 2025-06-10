@@ -1,6 +1,6 @@
 //
 //  BubbleInputViewController.swift
-//  BTMaterial_Example
+//  
 //
 //  Created by qixin on 2023/4/17.
 //  Copyright © 2023 CocoaPods. All rights reserved.
@@ -45,8 +45,8 @@ class BubbleInputViewController: BubbleBaseViewController {
 
     
     
-    lazy var bubbleView: BTBubble = {
-        let b = BTBubble()
+    lazy var bubbleView: MCBubble = {
+        let b = MCBubble()
         b.arrowSize = CGSize(width: 6, height: 7)
         b.arrowOffset = .before(8)
         b.horizontalOffset = -130

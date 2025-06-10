@@ -1,6 +1,6 @@
 //
-//  BTBubble.swift
-//  BTBubble
+//  MCBubble.swift
+//  MCBubble
 //
 //  Created by Mccc on 2022/11/21.
 //
@@ -14,8 +14,8 @@ fileprivate struct CornerPoint {
     var endAngle: CGFloat
 }
 
-public extension BTBubble {
-    class func pathWith(rect: CGRect, frame: CGRect, direction: BTBubble.Direction, arrowSize: CGSize, arrowPosition: CGPoint, arrowRadius: CGFloat, borderWidth: CGFloat = 0, radius: CGFloat = 0) -> UIBezierPath {
+public extension MCBubble {
+    class func pathWith(rect: CGRect, frame: CGRect, direction: MCBubble.Direction, arrowSize: CGSize, arrowPosition: CGPoint, arrowRadius: CGFloat, borderWidth: CGFloat = 0, radius: CGFloat = 0) -> UIBezierPath {
         let path = UIBezierPath()
         var baloonFrame = CGRect.zero
         
