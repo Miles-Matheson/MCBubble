@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  MCBubble
 //
-//  Created by mancong@bertadata.com on 06/10/2025.
-//  Copyright (c) 2025 mancong@bertadata.com. All rights reserved.
+//  Created by Mccc on 06/10/2025.
+//  Copyright (c) 2025 Mccc. All rights reserved.
 //
 
 import UIKit
